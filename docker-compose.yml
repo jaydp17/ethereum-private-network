@@ -17,4 +17,4 @@ services:
     volumes:
       - ./base-config:/base-config
       - ./nodes-data/node2:/root/.ethereum
-    command: geth --identity="second-node" --networkid="7" --rpcaddr 0.0.0.0
+    command: geth --identity="second-node" --networkid="7" --rpcaddr 0.0.0.0 --mine --minerthreads 1
