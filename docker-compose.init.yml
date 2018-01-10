@@ -1,0 +1,17 @@
+version: "2.3"
+services:
+  first-node-init:
+    build: .
+    volumes:
+      - ./base-config:/base-config
+      - ./nodes-data/node1:/root/.ethereum
+    command: geth init /base-config/genesis.json
+    container_name: first-node-init
+  
+  second-node-init:
+    build: .
+    volumes:
+      - ./base-config:/base-config
+      - ./nodes-data/node2:/root/.ethereum
+    command: geth init /base-config/genesis.json
+    container_name: second-node-init
