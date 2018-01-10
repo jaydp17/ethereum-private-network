@@ -14,6 +14,7 @@ services:
   second-node:
     build: .
     container_name: second-node
+    cpus: 1
     volumes:
       - ./base-config:/base-config
       - ./nodes-data/node2:/root/.ethereum
