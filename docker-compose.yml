@@ -3,10 +3,13 @@ services:
   first-node:
     build: .
     container_name: first-node
+    ports:
+      - 8545:8545
+      - 8546:8546
     volumes:
       - ./base-config:/base-config
       - ./nodes-data/node1:/root/.ethereum
-    command: geth --identity="first-node" --networkid="7" --rpcaddr 0.0.0.0
+    command: geth --identity="first-node" --networkid="7" --ws --wsaddr 0.0.0.0 --wsorigins "*" --wsapi="admin,debug,eth,miner,net,personal,shh,txpool,web3"
 
   second-node:
     build: .
