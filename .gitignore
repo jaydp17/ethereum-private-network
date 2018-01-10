@@ -1,3 +1,4 @@
 nodes-data
 boot
 node_modules
+base-config/genesis.json

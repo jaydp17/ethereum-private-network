@@ -1,13 +1,18 @@
 {
   "config": {
-    "chainId": 0,
+    "chainId": 1234,
     "homesteadBlock": 0,
     "eip155Block": 0,
     "eip158Block": 0
   },
-  "alloc": {},
+  "alloc": {
+    "__ADDR1__": "1000000000000000000000",
+    "__ADDR2__": "1000000000000000000000",
+    "__ADDR3__": "1000000000000000000000",
+    "__ADDR4__": "1000000000000000000000"
+  },
   "coinbase": "0x0000000000000000000000000000000000000000",
-  "difficulty": "0x500",
+  "difficulty": "0x400",
   "extraData": "",
   "gasLimit": "0x2fefd8",
   "nonce": "0x0000000000000042",
