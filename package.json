@@ -1,5 +1,23 @@
 {
+  "name": "ethereum-private-network",
+  "description": "Demo of how you can easily boot up an Ethereum Private Network Edit",
+  "version": "1.0.0",
+  "author": "Jaydeep Solanki <jaydp17@gmail.com> (https://jaydp.com)",
+  "bugs": {
+    "url": "https://github.com/jaydp17/ethereum-private-network/issues"
+  },
   "dependencies": {
     "web3": "^1.0.0-beta.27"
+  },
+  "devDependencies": {},
+  "homepage": "https://github.com/jaydp17/ethereum-private-network#readme",
+  "license": "MIT",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jaydp17/ethereum-private-network.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
