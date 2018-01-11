@@ -9,7 +9,7 @@ services:
     volumes:
       - ./base-config:/base-config
       - ./nodes-data/node1:/root/.ethereum
-    command: geth --identity="first-node" --networkid="7" --ws --wsaddr 0.0.0.0 --wsorigins "*" --wsapi="admin,debug,eth,miner,net,personal,shh,txpool,web3"
+    command: geth --identity="first-node" --networkid="7" --ws --wsaddr 0.0.0.0 --wsorigins "*" --wsapi="admin,debug,eth,miner,net,personal,shh,txpool,web3" --rpc --rpcaddr 0.0.0.0 --rpccorsdomain "*" --rpcapi="admin,debug,eth,miner,net,personal,shh,txpool,web3"
 
   second-node:
     build: .
