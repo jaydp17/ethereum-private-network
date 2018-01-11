@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+. ./build.sh
+
 # creates a new account and saves in the keystore
 get_new_account() {
   # new_account_output="Address: {af5e8bb52b243d5ce616e5eb11acb8b10fae9fc3}"
@@ -18,12 +20,12 @@ addr6=$(get_new_account node2)
 template_path="./base-config/genesis-template.json"
 genesis_path="./base-config/genesis.json"
 cp $template_path $genesis_path
-sed -i s/__ADDR1__/$addr1/g $genesis_path
-sed -i s/__ADDR2__/$addr2/g $genesis_path
-sed -i s/__ADDR3__/$addr3/g $genesis_path
-sed -i s/__ADDR4__/$addr4/g $genesis_path
-sed -i s/__ADDR5__/$addr5/g $genesis_path
-sed -i s/__ADDR6__/$addr6/g $genesis_path
+sed -i .bak s/__ADDR1__/$addr1/g $genesis_path
+sed -i .bak s/__ADDR2__/$addr2/g $genesis_path
+sed -i .bak s/__ADDR3__/$addr3/g $genesis_path
+sed -i .bak s/__ADDR4__/$addr4/g $genesis_path
+sed -i .bak s/__ADDR5__/$addr5/g $genesis_path
+sed -i .bak s/__ADDR6__/$addr6/g $genesis_path
 
 # initialize the chain
 docker-compose -f docker-compose.init.yml up

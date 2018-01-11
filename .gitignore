@@ -2,3 +2,4 @@ nodes-data
 boot
 node_modules
 base-config/genesis.json
+base-config/genesis.json.bak
